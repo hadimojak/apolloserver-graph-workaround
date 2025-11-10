@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Car {
+  brand: String!
+  id: String!
+  isAvailable: Boolean!
+  model: String!
+  year: Int!
+}
+
+input CreateCarInput {
+  brand: String!
+  model: String!
+  year: Int!
+}
+
+type Mutation {
+  createCar(input: CreateCarInput!): Car!
+}
+
+type Query {
+  car(id: String!): Car!
+  cars: [Car!]!
+}
